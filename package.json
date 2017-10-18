@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/jonapgar/cachetag#readme",
   "dependencies": {
+    "debug": "^3.1.0",
+    "fast-crc32c": "^1.0.4",
     "lodash": "^4.17.4",
     "promise": "^8.0.1",
     "redis": "^2.8.0",
