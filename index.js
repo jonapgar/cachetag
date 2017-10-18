@@ -50,11 +50,6 @@ function Cache(key,timeoutSetting,autorefresh,persist,version){
 
 	var self=this;
 
-	
-
-	// persist = false;
-
-
 	if (persist) {
 		_notice('persisting cache %s',key);
 		this.persist = _.clone(cache('persist').get(_.pick(persist,['prefix','db','host']),function(){
@@ -223,38 +218,6 @@ function Val(cache,key,data,destroy,timeoutSetting,autorefresh) {
 	v.autorefresh = autorefresh;
 }
 
-// var i = 0;
-// function HashMap(){
-// 	return this;
-// }
-// HashMap.prototype.init = function(){
-// 	if (this.initialized)
-// 		return;
-	
-// 	var self=this;
-// 	this.cache = new Cache('hm_'+i,5,false)
-// 	this.timeout =setTimeout(function(){
-// 		self.initialize=false;
-// 		self.cache.clear();
-// 	},5000)
-// 	i++;
-// 	this.initialized=true;
-// }
-// HashMap.prototype.get=function(key){
-// 	this.init();
-// 	return this.cache.get(key)
-// }
-// HashMap.prototype.set=function(key,value){
-// 	this.init();
-// 	this.cache.set(key,value);
-// 	return this;
-// }
-// HashMap.prototype.has= function(key){
-// 	this.init();
-// 	return this.cache.has(key)
-// }
-
-// cache.HashMap = HashMap;
 
 var valProt = Val.prototype;
 
@@ -527,16 +490,7 @@ prot.unset=function(key) {
 	return undefined
 }
 
-// _.each(prot,function(v,k){
-// 	prot[k] = function(){
-// 		var key = this.key;
-// 		_log('accessing cache %s',this.key);
-// 		makeTimeout(this,this.timeoutSetting,function(){
-// 			cache.unset(key)
-// 		});
-// 		v.apply(this,arguments)
-// 	}
-// })
+
 
 
 
