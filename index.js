@@ -11,6 +11,14 @@ var gzip = zlib.gzip;
 var gunzip = zlib.gunzip;
 var loose = require('./setloose.js')({resolution:1000,cleanInterval:60000});
 
+var debug = require('debug');
+
+var _log = global._log || debug('cachetag:log');
+var _notice = global._notice || debug('cachetag:notice');
+var _warning = global._warning || debug('cachetag:warning');
+var _error = global._error || debug('cachetag:error');
+
+
 function logerr(err,results){
 	if (err)
 		return _error(err)
