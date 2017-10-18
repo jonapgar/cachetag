@@ -1,0 +1,31 @@
+{
+  "name": "cachetag",
+  "version": "1.0.0",
+  "description": "nodejs memory cache with optional persistence to redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonapgar/cachetag.git"
+  },
+  "keywords": [
+    "cache",
+    "redis",
+    "nodejs"
+  ],
+  "author": "Jon Apgar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonapgar/cachetag/issues"
+  },
+  "homepage": "https://github.com/jonapgar/cachetag#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "promise": "^8.0.1",
+    "redis": "^2.8.0",
+    "setloose": "^1.0.0",
+    "zlib": "^1.0.5"
+  }
+}
