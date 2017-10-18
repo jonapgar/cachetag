@@ -1,5 +1,5 @@
 var map={};
-var hash = require('./hash');
+var hash = require('./hash.js');
 var _  = require('lodash');
 
 var fs = require('fs');
@@ -9,7 +9,7 @@ var Promise = require('promise');
 var zlib = require('zlib');
 var gzip = zlib.gzip;
 var gunzip = zlib.gunzip;
-var loose = require('./setloose.js')({resolution:1000,cleanInterval:60000});
+var loose = require('setloose')({resolution:1000,cleanInterval:60000});
 
 var debug = require('debug');
 
